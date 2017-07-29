@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>web</display-name>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+		<servlet-name>HitCounter</servlet-name>
+		<servlet-class>web.servlet.HitCounterController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HitCounter</servlet-name>
+		<url-pattern>/hit-counter.php</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>UTF8</filter-name>
+		<filter-class>web.filter.UTF8Filter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>UTF8</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+</web-app>

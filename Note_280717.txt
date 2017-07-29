@@ -1,0 +1,26 @@
+﻿UTF8Filter.java
+- Declare how to use this class in web.xml file at <filter>, <filter-mapping> tags
+- Function is help every other servlet classes use UTF-8
+
+MyFilter.java
+- Declare how to use this class by annotation @WebFilter(urlPatterns={"/*"},
+dispatcherTypes=DispatcherType.REQUEST)
+- Function is help every other servlet classes know when doFilter/init/destroy run
+
+HitCounterFilter.java
+- Declare how to use this class by annotation @WebFilter(urlPatterns = { "/*" }, 
+dispatcherTypes = DispatcherType.REQUEST)
+- Function is count of hit counter at any page in doFilter method + EShopV10 db
+- How to check this Filter: run HitCounterController -> login account ->
+run any servlet or jsp file and check in database. If Url doesn't exist,
+it will be created in database and Clicks will increase is 1.
+Else, it will continue to plus 1 into Clicks at existed Url
+
+SecurityFilter.java
+- Declare how to use this class by annotation @WebFilter(urlPatterns = {"/hit-counter.php","/index.jsp"}, 
+dispatcherTypes = DispatcherType.REQUEST)
+- Function require login before run hit-counter.php and index.jsp,
+@WebFilter can be change to suit the requirements
+
+
+
