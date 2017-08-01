@@ -36,7 +36,7 @@ else config failed (check before step again)
 - Step 8: At Apache home page, click at manager webapps -> 
 go to Tomcat Web Application Manager page -> if see /web (project name),
 deploy success. Else, deploy failed.
-- Step 9: Check functions of your project
+- Step 9: Check functions of your project like example: localhost:7777/web/login.php
 
 
 
